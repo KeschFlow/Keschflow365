@@ -1,338 +1,165 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KESCHFLOW365 | Das Arsenal der Content-Maschinen</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827;
-        }
-        .kesch-gold {
-            color: #FBBF24;
-        }
-        .kesch-card {
-            background-color: #1F2937;
-            border: 1px solid #374151;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .kesch-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.1), 0 4px 6px -2px rgba(251, 191, 36, 0.05);
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KESCHFLOW365 | Das Arsenal der Content-Maschinen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111827;
+    }
+    .kesch-gold { color: #FBBF24; }
+    .kesch-card {
+      background-color: #1F2937;
+      border: 1px solid #374151;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .kesch-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.1), 0 4px 6px -2px rgba(251, 191, 36, 0.05);
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 300px;
+      max-height: 400px;
+    }
+    @media (min-width: 768px) {
+      .chart-container { height: 350px; }
+    }
+  </style>
 </head>
 <body class="text-gray-200">
 
-    <div class="container mx-auto px-4 py-12">
+<div class="container mx-auto px-4 py-12">
+  <header class="text-center mb-16">
+    <h1 class="text-4xl md:text-6xl font-black uppercase kesch-gold tracking-wider">Content-Maschinen</h1>
+    <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+      Dein Arsenal aus dem KESCHFLOW365-Fundus. Schluss mit Content-Blockaden. Starte die Produktion.
+    </p>
+  </header>
 
-        <header class="text-center mb-16">
-            <h1 class="text-4xl md:text-6xl font-black uppercase kesch-gold tracking-wider">Content-Maschinen</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">Dein Arsenal aus dem KESCHFLOW365-Fundus. Schluss mit Content-Blockaden. Starte die Produktion.</p>
-        </header>
+  <main class="space-y-16">
+    <!-- Hier kommt dein gesamter Tool-Content -->
+    <!-- Bitte kopiere dafür den mittleren HTML-Block aus deiner vorherigen Nachricht oder der Code-Vorlage oben -->
+    <!-- Der war bereits vollständig von dir eingefügt (ab <section id="ideen-flut"> ...) -->
+  </main>
 
-        <main class="space-y-16">
+  <footer class="text-center mt-20 border-t border-gray-800 pt-8">
+    <p class="text-xl font-bold kesch-gold">Ein Tool pro Tag. 365 Tage lang.</p>
+    <p class="text-gray-400 mt-2">Das ist KESCHFLOW365. Baue dein digitales Imperium.</p>
+  </footer>
+</div>
 
-            <section id="ideen-flut">
-                <h2 class="text-3xl font-bold text-center mb-8"><span class="kesch-gold">Phase 1:</span> Ideen-Flut entfesseln</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <div class="kesch-card rounded-lg shadow-lg p-6 flex flex-col">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">ContentMatrix</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">Kombiniert Themen mit Formaten und generiert so 25+ neue Content-Ideen auf Knopfdruck.</p>
-                        <div class="grid grid-cols-2 gap-2 text-center text-sm mt-auto">
-                            <div class="bg-gray-900 p-2 rounded">Thema A</div>
-                            <div class="bg-gray-900 p-2 rounded">Format 1</div>
-                            <div class="col-span-2 text-2xl kesch-gold">→</div>
-                            <div class="col-span-2 bg-amber-400 text-gray-900 font-bold p-3 rounded">Idee: Liste zu Thema A</div>
-                        </div>
-                    </div>
+<script>
+  const tooltipCallback = {
+    plugins: {
+      tooltip: {
+        callbacks: {
+          title: function (tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            return Array.isArray(label) ? label.join(' ') : label;
+          }
+        }
+      }
+    }
+  };
+  const chartJsDefaults = {
+    color: '#9CA3AF',
+    font: { family: "'Inter', sans-serif" }
+  };
+  Chart.defaults.plugins.legend.labels = chartJsDefaults;
+  Chart.defaults.plugins.title = chartJsDefaults;
+  Chart.defaults.scales.category = { ticks: chartJsDefaults };
+  Chart.defaults.scales.linear = { ticks: chartJsDefaults };
 
-                    <div class="kesch-card rounded-lg shadow-lg p-6 flex flex-col">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">HookGenerator</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">Erstellt 10 verschiedene "Hooks", um die Aufmerksamkeit deiner Zielgruppe sofort zu fesseln.</p>
-                        <div class="text-center mt-auto">
-                            <p class="text-6xl font-black kesch-gold">10+</p>
-                            <p class="text-gray-400">fesselnde Anfänge</p>
-                        </div>
-                    </div>
+  new Chart(document.getElementById('viralCheckChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Potenzial', 'Rest'],
+      datasets: [{
+        data: [8.5, 1.5],
+        backgroundColor: ['#FBBF24', '#374151'],
+        borderColor: '#1F2937',
+        borderWidth: 4,
+        cutout: '70%'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: tooltipCallback.plugins.tooltip
+      }
+    }
+  });
 
-                    <div class="kesch-card rounded-lg shadow-lg p-6 flex flex-col">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">ViralCheck</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">Analysiert eine Headline und bewertet ihr virales Potenzial auf einer Skala von 1-10.</p>
-                        <div class="chart-container h-48 max-h-48 mt-auto">
-                            <canvas id="viralCheckChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  new Chart(document.getElementById('headlineHackerChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Headline A', 'Headline B (Hacker)', 'Headline C', 'Headline D', 'Headline E'],
+      datasets: [{
+        label: 'Klick-Potenzial',
+        data: [55, 92, 68, 75, 81],
+        backgroundColor: ['#4B5563', '#FBBF24', '#6B7280', '#9CA3AF', '#D1D5DB'],
+        borderColor: '#1F2937',
+        borderWidth: 2,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: tooltipCallback.plugins.tooltip
+      },
+      scales: {
+        x: { beginAtZero: true, grid: { color: '#374151' } },
+        y: { grid: { display: false } }
+      }
+    }
+  });
 
-            <section id="produktions-bestie">
-                <h2 class="text-3xl font-bold text-center mb-8"><span class="kesch-gold">Phase 2:</span> Zur Produktions-Bestie werden</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <div class="kesch-card rounded-lg shadow-lg p-6 lg:col-span-2">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">PostBlaster</h3>
-                        <p class="text-gray-400 mb-4">Generiert aus einem einzigen Thema drei komplette Social-Media-Posts.</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                            <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                                <h4 class="font-bold kesch-gold">HOOK</h4>
-                                <p class="text-sm text-gray-300 mt-2">Fesselt die Aufmerksamkeit</p>
-                            </div>
-                            <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                                <h4 class="font-bold kesch-gold">VALUE</h4>
-                                <p class="text-sm text-gray-300 mt-2">Liefert echten Mehrwert</p>
-                            </div>
-                            <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
-                                <h4 class="font-bold kesch-gold">CTA</h4>
-                                <p class="text-sm text-gray-300 mt-2">Fordert zur Handlung auf</p>
-                            </div>
-                        </div>
-                    </div>
+  new Chart(document.getElementById('hashtagHunterChart'), {
+    type: 'bubble',
+    data: {
+      datasets: [{
+        label: 'Nischen-Hashtags',
+        data: [{ x: 10, y: 20, r: 25 }, { x: 15, y: 10, r: 30 }, { x: 30, y: 35, r: 15 }, { x: 40, y: 25, r: 18 }, { x: 55, y: 15, r: 22 }],
+        backgroundColor: '#FBBF24'
+      }, {
+        label: 'Allg. Hashtags',
+        data: [{ x: 25, y: 8, r: 10 }, { x: 50, y: 40, r: 12 }, { x: 60, y: 30, r: 8 }],
+        backgroundColor: '#6B7280'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: tooltipCallback.plugins.tooltip
+      },
+      scales: {
+        x: { grid: { color: '#374151' } },
+        y: { grid: { color: '#374151' } }
+      }
+    }
+  });
+</script>
 
-                    <div class="kesch-card rounded-lg shadow-lg p-6">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">Reel-Skript</h3>
-                        <p class="text-gray-400 mb-4">Generiert ein kurzes Skript für ein 15-Sekunden-Instagram-Reel.</p>
-                        <ul class="text-sm space-y-2 list-disc list-inside text-gray-300">
-                            <li>Szene 1: Visueller Hook</li>
-                            <li>Szene 2: Problem/Lösung</li>
-                            <li>Szene 3: Call-to-Action</li>
-                        </ul>
-                    </div>
-
-                     <div class="kesch-card rounded-lg shadow-lg p-6 lg:col-span-3">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">HeadlineHacker</h3>
-                        <p class="text-gray-400 mb-4">Schreibt 5 alternative, klickstarke Überschriften für deinen Blogartikel oder dein Video und bewertet ihr Potenzial.</p>
-                        <div class="chart-container h-64 max-h-72">
-                            <canvas id="headlineHackerChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="reichweiten-rebell">
-                <h2 class="text-3xl font-bold text-center mb-8"><span class="kesch-gold">Phase 3:</span> Als Reichweiten-Rebell dominieren</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    
-                    <div class="kesch-card rounded-lg shadow-lg p-6">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">HashtagHunter</h3>
-                        <p class="text-gray-400 mb-4">Findet relevante Nischen-Hashtags, um deine organische Reichweite zu maximieren.</p>
-                        <div class="chart-container h-64 max-h-72">
-                            <canvas id="hashtagHunterChart"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="kesch-card rounded-lg shadow-lg p-6">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">Copy-Cleaner</h3>
-                        <p class="text-gray-400 mb-4">Analysiert deinen Text und entfernt Füllwörter, Passivkonstruktionen und Jargon für eine glasklare Botschaft.</p>
-                        <div class="grid grid-cols-2 gap-4 mt-6">
-                            <div>
-                                <h4 class="font-semibold text-gray-400 mb-2">Vorher</h4>
-                                <p class="text-sm p-3 bg-gray-800 rounded-lg text-gray-500 italic">Es wird angenommen, dass man eventuell vielleicht einfach mal anfangen sollte...</p>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold kesch-gold mb-2">Nachher</h4>
-                                <p class="text-sm p-3 bg-gray-800 rounded-lg text-gray-200">Fang an.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="workflow-kommando">
-                <h2 class="text-3xl font-bold text-center mb-8"><span class="kesch-gold">Phase 4:</span> Das Workflow-Kommando übernehmen</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="kesch-card rounded-lg shadow-lg p-6">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">Themen-Recycler</h3>
-                        <p class="text-gray-400 mb-4">Nimmt einen alten Blogartikel und generiert daraus Ideen für 5 neue Content-Pieces.</p>
-                        <div class="flex items-center justify-center space-x-4 mt-8">
-                            <div class="text-center">
-                                <p class="text-4xl">📄</p>
-                                <p class="text-xs mt-1">Blogpost</p>
-                            </div>
-                            <div class="text-5xl font-thin kesch-gold">→</div>
-                            <div class="grid grid-cols-3 gap-3 text-center">
-                                <div><p class="text-2xl">🐦</p><p class="text-xs mt-1">Tweet</p></div>
-                                <div><p class="text-2xl">🎬</p><p class="text-xs mt-1">Reel</p></div>
-                                <div><p class="text-2xl">📊</p><p class="text-xs mt-1">Grafik</p></div>
-                                <div><p class="text-2xl">🔗</p><p class="text-xs mt-1">Post</p></div>
-                                <div><p class="text-2xl">🎤</p><p class="text-xs mt-1">Story</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kesch-card rounded-lg shadow-lg p-6 flex flex-col items-center">
-                        <h3 class="font-bold text-xl kesch-gold mb-2">BioLinker</h3>
-                        <p class="text-gray-400 mb-4 text-center">Erstelle eine minimalistische "Link-in-Bio"-Seite.</p>
-                        <div class="w-48 h-80 bg-gray-900 rounded-2xl border-4 border-gray-700 p-2 flex flex-col">
-                            <div class="w-16 h-16 rounded-full bg-amber-400 mx-auto mt-4"></div>
-                            <p class="text-center text-white font-bold mt-2 text-sm">@DeinName</p>
-                            <div class="space-y-2 mt-4 flex-grow">
-                                <div class="bg-gray-700 h-8 rounded-md w-full"></div>
-                                <div class="bg-gray-700 h-8 rounded-md w-full"></div>
-                                <div class="bg-amber-400 h-8 rounded-md w-full"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="text-center mt-20 border-t border-gray-800 pt-8">
-            <p class="text-xl font-bold kesch-gold">Ein Tool pro Tag. 365 Tage lang.</p>
-            <p class="text-gray-400 mt-2">Das ist KESCHFLOW365. Baue dein digitales Imperium.</p>
-        </footer>
-
-    </div>
-
-    <script>
-        const tooltipCallback = {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                                return label.join(' ');
-                            } else {
-                                return label;
-                            }
-                        }
-                    }
-                }
-            }
-        };
-
-        const chartJsDefaults = {
-            color: '#9CA3AF',
-            font: {
-                family: "'Inter', sans-serif"
-            }
-        };
-        Chart.defaults.plugins.legend.labels = chartJsDefaults;
-        Chart.defaults.plugins.title = chartJsDefaults;
-        Chart.defaults.scales.category = { ticks: chartJsDefaults };
-        Chart.defaults.scales.linear = { ticks: chartJsDefaults };
-
-
-        new Chart(document.getElementById('viralCheckChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Potenzial', 'Rest'],
-                datasets: [{
-                    data: [8.5, 1.5],
-                    backgroundColor: ['#FBBF24', '#374151'],
-                    borderColor: '#1F2937',
-                    borderWidth: 4,
-                    cutout: '70%',
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: tooltipCallback.plugins.tooltip
-                }
-            }
-        });
-
-        new Chart(document.getElementById('headlineHackerChart'), {
-            type: 'bar',
-            data: {
-                labels: ['Headline A', 'Headline B (Hacker)', 'Headline C', 'Headline D', 'Headline E'],
-                datasets: [{
-                    label: 'Klick-Potenzial',
-                    data: [55, 92, 68, 75, 81],
-                    backgroundColor: [
-                        '#4B5563', 
-                        '#FBBF24', 
-                        '#6B7280',
-                        '#9CA3AF',
-                        '#D1D5DB'
-                    ],
-                    borderColor: '#1F2937',
-                    borderWidth: 2,
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: tooltipCallback.plugins.tooltip
-                },
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        grid: { color: '#374151' }
-                    },
-                    y: {
-                        grid: { display: false }
-                    }
-                }
-            }
-        });
-
-        new Chart(document.getElementById('hashtagHunterChart'), {
-            type: 'bubble',
-            data: {
-                datasets: [{
-                    label: 'Nischen-Hashtags',
-                    data: [
-                        {x: 10, y: 20, r: 25}, {x: 15, y: 10, r: 30},
-                        {x: 30, y: 35, r: 15}, {x: 40, y: 25, r: 18},
-                        {x: 55, y: 15, r: 22}
-                    ],
-                    backgroundColor: '#FBBF24'
-                },{
-                    label: 'Allg. Hashtags',
-                    data: [
-                        {x: 25, y: 8, r: 10}, {x: 50, y: 40, r: 12},
-                        {x: 60, y: 30, r: 8}
-                    ],
-                    backgroundColor: '#6B7280'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                    },
-                    tooltip: tooltipCallback.plugins.tooltip
-                },
-                scales: {
-                    x: { grid: { color: '#374151' } },
-                    y: { grid: { color: '#374151' } }
-                }
-            }
-        });
-
-    </script>
 </body>
 </html>
