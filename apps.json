@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "XPPlanner",
+    "date": "2025-06-22",
+    "link": "https://keschflow365.my.canva.site/xpplanner",
+    "desc": "Deine Tagesziele als Game – mit XP-Belohnung."
+  },
+  {
+    "id": 2,
+    "name": "RebellFokus",
+    "date": "2025-06-23",
+    "link": "https://keschflow365.my.canva.site/rebellfokus",
+    "desc": "Schluss mit Ablenkung – Fokus-Tracker im KESCHFLOW-Stil."
+  },
+  {
+    "id": 3,
+    "name": "AngstBrecher",
+    "date": "2025-06-24",
+    "link": "https://keschflow365.my.canva.site/angstbrecher-app",
+    "desc": "Zerlege deine größte Angst in Mini-Schritte – werde unaufhaltsam."
+  }
+]
