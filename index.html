@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KESCHFLOW365 | Showroom</title>
+  <meta name="description" content="KESCHFLOW365 Showroom: Entdecke Tools wie AngstBrecher, RebellFokus und XPPlanner aus der 365-Tage-Challenge.">
+  <meta name="keywords" content="KESCHFLOW365, AngstBrecher, RebellFokus, XPPlanner, Productivity Tools, Fokus, Selbstdisziplin">
+  <meta property="og:title" content="KESCHFLOW365 Showroom">
+  <meta property="og:description" content="Ein Tool pro Tag. Baue dein digitales Imperium mit AngstBrecher und mehr.">
+  <meta property="og:image" content="https://keschflow.link/assets/og-image.jpg">
+  <meta property="og:url" content="https://keschflow365.my.canva.site">
+  <meta name="theme-color" content="#FBBF24">
+  <link rel="icon" href="https://keschflow.link/assets/favicon.ico" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
@@ -19,6 +28,15 @@
       box-shadow: 0 10px 15px -3px rgba(251,191,36,0.1), 0 4px 6px -2px rgba(251,191,36,0.05);
     }
   </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKPNJHNW3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZKPNJHNW3K');
+  </script>
 </head>
 <body class="text-gray-200">
   <div class="container mx-auto px-4 py-12">
@@ -30,9 +48,9 @@
     <main class="space-y-12">
       <!-- Tool 3: AngstBrecher -->
       <div class="kesch-card p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start">
-        <video class="w-full md:w-1/2 rounded-lg border border-gray-700" controls>
-          <source src="AngstBrecher_Werbevideo_Konzept.mp4" type="video/mp4">
-          Dein Browser unterstützt kein Video-Tag.
+        <video class="w-full md:w-1/2 rounded-lg border border-gray-700" controls aria-label="AngstBrecher Werbevideo" poster="https://keschflow.link/assets/angstbrecher-poster.jpg">
+          <source src="https://keschflow.link/assets/AngstBrecher_Werbevideo_Konzept.mp4" type="video/mp4">
+          <img src="https://keschflow.link/assets/angstbrecher-poster.jpg" alt="AngstBrecher Video Vorschau">
         </video>
         <div class="md:w-1/2">
           <h2 class="text-3xl font-black kesch-gold mb-2">#03 – AngstBrecher</h2>
@@ -45,7 +63,7 @@
 
       <!-- Tool 2: RebellFokus -->
       <div class="kesch-card p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start">
-        <img src="https://keschflow.link/assets/rebellfokus-preview.png" alt="RebellFokus Vorschau" class="w-full md:w-1/2 rounded-lg border border-gray-700">
+        <img src="https://keschflow.link/assets/rebellfokus-preview.png" alt="RebellFokus App-Screenshot" class="w-full md:w-1/2 rounded-lg border border-gray-700">
         <div class="md:w-1/2">
           <h2 class="text-3xl font-black kesch-gold mb-2">#02 – RebellFokus</h2>
           <p class="text-gray-300 mb-4">Ein minimalistischer Timer, der Ablenkungen blockiert und dich für jede ununterbrochene Fokus-Session mit "Fokus-Punkten" belohnt.</p>
@@ -57,7 +75,7 @@
 
       <!-- Tool 1: XPPlanner -->
       <div class="kesch-card p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start">
-        <img src="https://keschflow.link/assets/xpplanner-preview.png" alt="XPPlanner Vorschau" class="w-full md:w-1/2 rounded-lg border border-gray-700">
+        <img src="https://keschflow.link/assets/xpplanner-preview.png" alt="XPPlanner App-Screenshot" class="w-full md:w-1/2 rounded-lg border border-gray-700">
         <div class="md:w-1/2">
           <h2 class="text-3xl font-black kesch-gold mb-2">#01 – XPPlanner</h2>
           <p class="text-gray-300 mb-4">Gamifiziere deine Tagesziele und sammle Erfahrungspunkte (XP) für messbare Fortschritte im echten Leben.</p>
@@ -66,7 +84,6 @@
           </a>
         </div>
       </div>
-
     </main>
 
     <footer class="text-center mt-20 border-t border-gray-800 pt-8">
