@@ -49,9 +49,7 @@
   </header>
 
   <main class="space-y-16">
-    <!-- Hier kommt dein gesamter Tool-Content -->
-    <!-- Bitte kopiere dafür den mittleren HTML-Block aus deiner vorherigen Nachricht oder der Code-Vorlage oben -->
-    <!-- Der war bereits vollständig von dir eingefügt (ab <section id="ideen-flut"> ...) -->
+    <div id="tool-content"></div>
   </main>
 
   <footer class="text-center mt-20 border-t border-gray-800 pt-8">
@@ -61,103 +59,27 @@
 </div>
 
 <script>
-  const tooltipCallback = {
-    plugins: {
-      tooltip: {
-        callbacks: {
-          title: function (tooltipItems) {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            return Array.isArray(label) ? label.join(' ') : label;
-          }
-        }
-      }
-    }
-  };
-  const chartJsDefaults = {
-    color: '#9CA3AF',
-    font: { family: "'Inter', sans-serif" }
-  };
-  Chart.defaults.plugins.legend.labels = chartJsDefaults;
-  Chart.defaults.plugins.title = chartJsDefaults;
-  Chart.defaults.scales.category = { ticks: chartJsDefaults };
-  Chart.defaults.scales.linear = { ticks: chartJsDefaults };
+  const tools = [
+    { name: 'ContentMatrix', desc: 'Kombiniert Themen mit Formaten und generiert so 25+ neue Content-Ideen auf Knopfdruck.' },
+    { name: 'HookGenerator', desc: 'Erstellt 10 verschiedene "Hooks", um die Aufmerksamkeit deiner Zielgruppe sofort zu fesseln.' },
+    { name: 'ViralCheck', desc: 'Analysiert eine Headline und bewertet ihr virales Potenzial auf einer Skala von 1–10.' },
+    { name: 'PostBlaster', desc: 'Generiert aus einem einzigen Thema drei komplette Social-Media-Posts mit Hook, Value und CTA.' },
+    { name: 'Reel-Skript', desc: 'Erstellt ein kompaktes Drehbuch für 15-Sekunden-Reels (Hook, Problem, CTA).' },
+    { name: 'HeadlineHacker', desc: 'Schreibt 5 klickstarke Überschriften und bewertet deren Potenzial.' },
+    { name: 'HashtagHunter', desc: 'Findet relevante Nischen-Hashtags für maximale organische Reichweite.' },
+    { name: 'Copy-Cleaner', desc: 'Reduziert Texte auf das Wesentliche – ohne Füllwörter, Passiv oder Jargon.' },
+    { name: 'Themen-Recycler', desc: 'Macht aus einem Blogartikel 5 neue Content-Pieces (Tweet, Reel, Post, Story, Grafik).' },
+    { name: 'BioLinker', desc: 'Erstellt eine minimalistische Link-in-Bio-Landingpage für deine Kanäle.' }
+  ];
 
-  new Chart(document.getElementById('viralCheckChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Potenzial', 'Rest'],
-      datasets: [{
-        data: [8.5, 1.5],
-        backgroundColor: ['#FBBF24', '#374151'],
-        borderColor: '#1F2937',
-        borderWidth: 4,
-        cutout: '70%'
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: tooltipCallback.plugins.tooltip
-      }
-    }
-  });
-
-  new Chart(document.getElementById('headlineHackerChart'), {
-    type: 'bar',
-    data: {
-      labels: ['Headline A', 'Headline B (Hacker)', 'Headline C', 'Headline D', 'Headline E'],
-      datasets: [{
-        label: 'Klick-Potenzial',
-        data: [55, 92, 68, 75, 81],
-        backgroundColor: ['#4B5563', '#FBBF24', '#6B7280', '#9CA3AF', '#D1D5DB'],
-        borderColor: '#1F2937',
-        borderWidth: 2,
-        borderRadius: 4
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: tooltipCallback.plugins.tooltip
-      },
-      scales: {
-        x: { beginAtZero: true, grid: { color: '#374151' } },
-        y: { grid: { display: false } }
-      }
-    }
-  });
-
-  new Chart(document.getElementById('hashtagHunterChart'), {
-    type: 'bubble',
-    data: {
-      datasets: [{
-        label: 'Nischen-Hashtags',
-        data: [{ x: 10, y: 20, r: 25 }, { x: 15, y: 10, r: 30 }, { x: 30, y: 35, r: 15 }, { x: 40, y: 25, r: 18 }, { x: 55, y: 15, r: 22 }],
-        backgroundColor: '#FBBF24'
-      }, {
-        label: 'Allg. Hashtags',
-        data: [{ x: 25, y: 8, r: 10 }, { x: 50, y: 40, r: 12 }, { x: 60, y: 30, r: 8 }],
-        backgroundColor: '#6B7280'
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { position: 'bottom' },
-        tooltip: tooltipCallback.plugins.tooltip
-      },
-      scales: {
-        x: { grid: { color: '#374151' } },
-        y: { grid: { color: '#374151' } }
-      }
-    }
+  const container = document.getElementById('tool-content');
+  tools.forEach(tool => {
+    container.innerHTML += `
+      <div class="kesch-card p-6 rounded-lg mb-6">
+        <h2 class="text-2xl font-bold kesch-gold mb-2">${tool.name}</h2>
+        <p class="text-gray-400">${tool.desc}</p>
+      </div>
+    `;
   });
 </script>
 
