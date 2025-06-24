@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting
+name: Deploy to Firebase
 
 on:
   push:
@@ -19,11 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-working-directory: .
+        working-directory: .
 
       - name: Build
         run: npm run build
-working-directory: .
+        working-directory: .
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
@@ -32,4 +32,3 @@ working-directory: .
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           channelId: live
           projectId: keschflow365-23b54
-
