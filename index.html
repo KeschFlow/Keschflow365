@@ -29,13 +29,24 @@
     }
   </style>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKPNJHNW3K"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZKPNJHNW3K');
+    const firebaseConfig = {
+      apiKey: "AIzaSyF4jeMECSGGJxUkWR2lFS-znmfx4949koE",
+      authDomain: "k1flow-4c349.firebaseapp.com",
+      projectId: "k1flow-4c349",
+      storageBucket: "k1flow-4c349.appspot.com",
+      messagingSenderId: "1026916872655",
+      appId: "1:1026916872655:web:4ae8c39a1fde7f332fe2ba",
+      measurementId: "G-2QWY22XNK0"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    const consent = localStorage.getItem("analytics_consent");
+    if (consent === "true") {
+      firebase.analytics(app);
+    }
   </script>
 </head>
 <body class="text-gray-200">
@@ -43,47 +54,46 @@
     <header class="text-center mb-16">
       <h1 class="text-5xl font-black uppercase kesch-gold tracking-wider">KESCHFLOW365 Showroom</h1>
       <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Ein Tool pro Tag. 365 Tage lang. Dein digitales Imperium beginnt hier.</p>
+      <button onclick="activateAnalytics()" class="mt-6 bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 transition">
+        🔐 Tracking aktivieren (DSGVO)
+      </button>
     </header>
 
     <main class="space-y-12">
+
       <!-- Tool 3: AngstBrecher -->
       <div class="kesch-card p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start">
-        <video class="w-full md:w-1/2 rounded-lg border border-gray-700" controls aria-label="AngstBrecher Werbevideo" poster="https://keschflow.link/assets/angstbrecher-poster.jpg">
-          <source src="https://keschflow.link/assets/AngstBrecher_Werbevideo_Konzept.mp4" type="video/mp4">
-          <img src="https://keschflow.link/assets/angstbrecher-poster.jpg" alt="AngstBrecher Video Vorschau">
+        <video class="w-full md:w-1/2 rounded-lg border border-gray-700" controls poster="https://keschflow.link/assets/angstbrecher-poster.jpg">
+          <source src="AngstBrecher_Werbevideo_Konzept.mp4" type="video/mp4">
+          <img src="https://keschflow.link/assets/angstbrecher-poster.jpg" alt="AngstBrecher Vorschau">
         </video>
         <div class="md:w-1/2">
           <h2 class="text-3xl font-black kesch-gold mb-2">#03 – AngstBrecher</h2>
-          <p class="text-gray-300 mb-4">Zerlege deine größte Angst in Mini-Schritte. Mit diesem Tool trainierst du Mut wie einen Muskel – täglich, fokussiert, digital.</p>
-          <a href="https://keschflow365.my.canva.site/angstbrecher-app" target="_blank" class="inline-block bg-amber-400 text-gray-900 font-bold px-5 py-3 rounded hover:bg-yellow-300 transition">
-            🚀 Jetzt starten
-          </a>
+          <p class="text-gray-300 mb-4">Zerlege deine größte Angst in Mini-Schritte. Trainiere Mut wie einen Muskel – täglich, digital, gamifiziert.</p>
+          <a href="https://keschflow365.my.canva.site/angstbrecher-app" target="_blank" class="inline-block bg-amber-400 text-gray-900 font-bold px-5 py-3 rounded hover:bg-yellow-300 transition">🚀 Jetzt starten</a>
         </div>
       </div>
 
       <!-- Tool 2: RebellFokus -->
       <div class="kesch-card p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start">
-        <img src="https://keschflow.link/assets/rebellfokus-preview.png" alt="RebellFokus App-Screenshot" class="w-full md:w-1/2 rounded-lg border border-gray-700">
+        <img src="https://keschflow.link/assets/rebellfokus-preview.png" alt="RebellFokus App" class="w-full md:w-1/2 rounded-lg border border-gray-700">
         <div class="md:w-1/2">
           <h2 class="text-3xl font-black kesch-gold mb-2">#02 – RebellFokus</h2>
-          <p class="text-gray-300 mb-4">Ein minimalistischer Timer, der Ablenkungen blockiert und dich für jede ununterbrochene Fokus-Session mit "Fokus-Punkten" belohnt.</p>
-          <a href="https://keschflow365.my.canva.site/rebellfokus-mobile-pomodoro-timer-app" target="_blank" class="inline-block bg-amber-400 text-gray-900 font-bold px-5 py-3 rounded hover:bg-yellow-300 transition">
-            ⏱️ Fokus starten
-          </a>
+          <p class="text-gray-300 mb-4">Ein radikal klarer Fokus-Timer. Ohne Schnickschnack. Mit Belohnungssystem gegen Aufschieberitis.</p>
+          <a href="https://keschflow365.my.canva.site/rebellfokus-mobile-pomodoro-timer-app" target="_blank" class="inline-block bg-amber-400 text-gray-900 font-bold px-5 py-3 rounded hover:bg-yellow-300 transition">⏱️ Fokus starten</a>
         </div>
       </div>
 
       <!-- Tool 1: XPPlanner -->
       <div class="kesch-card p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start">
-        <img src="https://keschflow.link/assets/xpplanner-preview.png" alt="XPPlanner App-Screenshot" class="w-full md:w-1/2 rounded-lg border border-gray-700">
+        <img src="https://keschflow.link/assets/xpplanner-preview.png" alt="XPPlanner Screenshot" class="w-full md:w-1/2 rounded-lg border border-gray-700">
         <div class="md:w-1/2">
           <h2 class="text-3xl font-black kesch-gold mb-2">#01 – XPPlanner</h2>
-          <p class="text-gray-300 mb-4">Gamifiziere deine Tagesziele und sammle Erfahrungspunkte (XP) für messbare Fortschritte im echten Leben.</p>
-          <a href="https://keschflow365.my.canva.site/xpplanner-web-app-vorlage" target="_blank" class="inline-block bg-amber-400 text-gray-900 font-bold px-5 py-3 rounded hover:bg-yellow-300 transition">
-            🎮 XP sammeln
-          </a>
+          <p class="text-gray-300 mb-4">Level dein Leben hoch: Setze Tagesziele, logge Erfolge und sammle XP – ganz ohne Bullshit.</p>
+          <a href="https://keschflow365.my.canva.site/xpplanner-web-app-vorlage" target="_blank" class="inline-block bg-amber-400 text-gray-900 font-bold px-5 py-3 rounded hover:bg-yellow-300 transition">🎮 XP sammeln</a>
         </div>
       </div>
+
     </main>
 
     <footer class="text-center mt-20 border-t border-gray-800 pt-8">
@@ -91,5 +101,12 @@
       <p class="text-gray-400 mt-2">Powered by Mut. Gebaut für Macher.</p>
     </footer>
   </div>
+
+  <script>
+    function activateAnalytics() {
+      localStorage.setItem("analytics_consent", "true");
+      location.reload();
+    }
+  </script>
 </body>
 </html>
